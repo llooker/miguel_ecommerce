@@ -1,8 +1,8 @@
 view: user_facts {
   derived_table: {
     sql: select u.id,
-                min(o.create_date) as first_order,
-                max(o.create_date) as last_order
+                min(o.created_at) as first_order,
+                max(o.created_at) as last_order
     from users u
     left join orders o
     on u.id=o.user_id
