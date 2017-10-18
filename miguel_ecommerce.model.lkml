@@ -6,6 +6,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 datagroup: long_persistence {
   max_cache_age: "4 hours"
   #more info: https://docs.looker.com/data-modeling/learning-lookml/caching
+  sql_trigger: select current_date ;;
 }
 
 
@@ -34,6 +35,11 @@ explore: users {
     type: inner
     relationship: one_to_one
     sql_on: ${users.id}=${user_data.id} ;;
+  }
+  join: user_facts {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${users.id}=${user_facts.id} ;;
   }
 }
 
