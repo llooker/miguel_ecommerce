@@ -9,6 +9,9 @@ datagroup: long_persistence {
   sql_trigger: select current_date ;;
 }
 
+datagroup: bughunt_erin {
+  sql_trigger: Select min(curtime()) ;;
+  }
 
 
 explore: order_items {
@@ -31,6 +34,7 @@ explore: order_items {
 }
 
 explore: users {
+  persist_with: bughunt_erin
   join: user_data {
     type: inner
     relationship: one_to_one
