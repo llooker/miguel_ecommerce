@@ -13,6 +13,7 @@ datagroup: bughunt_erin {
   sql_trigger: Select min(curtime()) ;;
   }
 
+explore: e_bughunt {}
 
 explore: order_items {
   persist_with: long_persistence
