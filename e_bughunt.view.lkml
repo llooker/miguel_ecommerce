@@ -1,6 +1,6 @@
 view: e_bughunt {
   derived_table: {
-    datagroup_trigger: bughunt_erin
+#    datagroup_trigger: bughunt_erin
     sql: -- use existing user_facts in tmp.LR$S260DPNTAVKY8W5EIBA7_user_facts
       SELECT
         user_facts.id  AS `user_facts.id`,
