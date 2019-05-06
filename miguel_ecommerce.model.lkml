@@ -1,7 +1,7 @@
 connection: "thelook"
 
 include: "*.view.lkml"         # include all views in this project
-include: "*.dashboard.lookml"  # include all dashboards in this project
+#include: "*.dashboard.lookml"  # include all dashboards in this project
 
 datagroup: long_persistence {
   max_cache_age: "4 hours"
